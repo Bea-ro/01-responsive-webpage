@@ -129,7 +129,7 @@ footer h2 {
     padding: 0 10px
 }
 
-.category-menu a:hover, .membership-cta a:hover, .product-desc a:hover, 
+.category-menu a:hover, .membership-cta a:hover, .product-desc:hover, 
 .membership-info a:hover, footer nav a:hover {
     text-decoration: underline 
 }
@@ -220,6 +220,26 @@ color: var(--color-white)
     margin-top: 18px;
 }
 
+#new-products-hombre, #new-products-divided {
+    display: none
+}
+
+#new-products-hombre-button:hover ~ #new-products-hombre {
+    display: flex
+}
+
+#new-products-hombre-button:hover ~ #new-products-mujer {
+    display: none
+}
+
+#new-products-divided-button:hover ~ #new-products-divided {
+    display: flex
+}
+
+#new-products-divided-button:hover ~ #new-products-mujer {
+    display: none
+}
+
 .carrousel-products ul {
     display: flex; 
 }
@@ -248,11 +268,6 @@ color: var(--color-white)
 .category {
     color:#707070
 }
-
-.new-products-navbar {
-    justify-content: left;
-    margin-top: 10px
-} 
 
 #multipacks-category {
     background-color: #c6c5cd
@@ -335,16 +350,18 @@ text-decoration: underline;
     background: #e6e6e6;
 }
 
-.new-products-navbar button {
+#new-products button {
     border-radius: 20px;
     border: 1px solid var(--color-black);
     margin-right: 16px;
     padding: 12px 16px;
     background-color: transparent;
+    margin-top: 10px;
 }
 
-.new-products-navbar button:visited {
+#new-products button:hover {
     background: var(--color-primary);
+    color: var(--color-white)
 }
 
 .footer-navs {
@@ -442,7 +459,7 @@ text-decoration: underline;
     .carrousel-products {
         padding-top: 32px
     }
-    .new-products-navbar button {
+    #new-products button {
         margin-right: 0
     }
     .carrousel-products li {
@@ -508,7 +525,7 @@ text-decoration: underline;
     .carrousel-products {
         padding-top: 32px
     }
-    .new-products-navbar button {
+    #new-products button {
         margin-right: 0
     }
     .carrousel-products li {
