@@ -3,7 +3,7 @@
 @font-face {
     font-family: 'Inter', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;800&display=swap');
-    font-wight: 400;
+    font-weight: 400;
     font-style: normal;
     font-size: 0.8rem
 }
@@ -42,7 +42,16 @@ a {
 
 ul {
     padding-left: 0;
-    margin-top: 0
+    margin-top: 0;
+    padding-top: 12px;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
 }
 
 li {
@@ -87,8 +96,6 @@ footer h2 {
 .customer-support, .shopping-navbar {
     font-size: small;    
     color: var(--color-black);
-    text-align: center;
-    justify-content: center;
 }
 
 .customer-support {
@@ -97,6 +104,11 @@ footer h2 {
 
 .customer-support-navicon {
     font-size: 18px
+}
+
+.dots-img {
+    width: 30px;
+    height: 15px;
 }
 
 .shopping-navbar img {
@@ -187,6 +199,22 @@ margin-bottom: 12px;
 color: var(--color-white) 
 }
 
+.main-section a, .secondary-section a {
+    border-radius: 0;
+    background-color: var(--color-white);
+    padding: 8px;
+    margin-left: 4px;
+    cursor: pointer
+}
+
+.main-section a:hover, .secondary-section a:hover {
+    background: #e6e6e6;
+}
+
+.main-section p, .secondary-section p {
+    padding-bottom: 24px;
+}
+
 #denim-category {
     background: url(./assets/images/denim-sq.png);  
     background-size: cover  
@@ -216,8 +244,30 @@ color: var(--color-white)
     color: var(--color-white)
 }
 
+.secondary-section h1 {
+    padding-bottom: 24px;
+}
+
 .carrousel-products h3 {
     margin-top: 18px;
+}
+
+#new-products h3 {
+    padding-bottom: 18px;
+}
+
+.new-products-button {
+    border-radius: 20px;
+    border: 1px solid var(--color-black);
+    margin-right: 16px;
+    padding: 12px 16px;
+    background-color: transparent;
+    margin-bottom: 10px;
+}
+
+.new-products-button:hover {
+    background: var(--color-primary);
+    color: var(--color-white)
 }
 
 #new-products-hombre, #new-products-divided {
@@ -258,11 +308,6 @@ color: var(--color-white)
 
 #products-proposal h3 {
     text-align: left;
-}
-
-#products-proposal li {
-    display: flex;
-    align-items: flex-end;
 }
 
 .category {
@@ -327,43 +372,6 @@ text-decoration: underline;
     font-size: small;
 }
 
-.dots-button {
-    border: 0px;
-    background-color: transparent;
-}
-
-.dots-img {
-    width: 30px;
-    height: 15px;
-}
-
-.main-section button, .secondary-section button {
-    border-radius: 0;
-    border: 1px solid var(--color-white);
-    background-color: var(--color-white);
-    padding: 8px;
-    margin: 10px 0 0 4px;
-    cursor: pointer
-}
-
-.main-section button:hover, .secondary-section button:hover {
-    background: #e6e6e6;
-}
-
-#new-products button {
-    border-radius: 20px;
-    border: 1px solid var(--color-black);
-    margin-right: 16px;
-    padding: 12px 16px;
-    background-color: transparent;
-    margin-top: 10px;
-}
-
-#new-products button:hover {
-    background: var(--color-primary);
-    color: var(--color-white)
-}
-
 .footer-navs {
     margin: 0 120px
 }
@@ -420,8 +428,8 @@ text-decoration: underline;
 
 @media screen and (max-width: 374px) {
     .customer-support, .shopping-navbar-text, .category-menu, .search-container, 
-    .main-section button, .secondary-section button,
-    .product-5, .product-6, .new-product-3, .new-product-4 {
+    .main-section a, .secondary-section a, .new-product-3, .new-product-4,
+    #new-products-sport-button, #new-products-bebe-button, #new-products-hm-button, #new-products-beauty-button {
         display: none;
     }
     header {
@@ -450,7 +458,7 @@ text-decoration: underline;
         font-size: 20px
     }
     .main-section p {
-        font-size: 12px
+        font-size: 12px;
     }
     #valentines-category {
         font-size: 20px;
@@ -459,11 +467,15 @@ text-decoration: underline;
     .carrousel-products {
         padding-top: 32px
     }
-    #new-products button {
-        margin-right: 0
+    #new-products a {
+        margin-right: 0;
+        font-size: .8em;
     }
     .carrousel-products li {
         width: 50%;
+    }
+    .product-5, .product-6 {
+        display: none;
     }
     #home-category {
         padding-top: 0
@@ -500,8 +512,8 @@ text-decoration: underline;
 
 @media screen and (min-width: 375px) and (max-width: 768px) {
     .customer-support, .shopping-navbar-text, .category-menu, .search-container, 
-    .main-section button, .secondary-section button,
-    .product-5, .product-6, .new-product-3, .new-product-4 {
+    .main-section a, .secondary-section a, .new-product-3, .new-product-4,
+    #new-products-sport-button {
         display: none;
     }
     header {
@@ -525,11 +537,14 @@ text-decoration: underline;
     .carrousel-products {
         padding-top: 32px
     }
-    #new-products button {
+    #new-products a {
         margin-right: 0
     }
     .carrousel-products li {
         width: 50%;
+    }
+    .product-5, .product-6 {
+        display: none;
     }
     #home-category {
         padding-top: 0
@@ -538,7 +553,7 @@ text-decoration: underline;
         margin-top: 12px
     }
     .blog-posts {
-        grid-template: rows
+        grid-template: rows;
     }
     .post-img {
         padding-bottom: 10px 
