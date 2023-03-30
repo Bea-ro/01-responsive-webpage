@@ -221,12 +221,12 @@ color: var(--color-white)
 }
 
 #looks-proposal {
-    background-image: url(./assets/images/looks-sq.png);
+    background-image: url(./assets/images/looks-sq.webp);
     background-size: cover  
 }
 
 #home-category {
-    background-image: url(./assets/images/home-sq.png);
+    background-image: url(./assets/images/home-sq.jpg);
     background-size: cover;
     display: flex;
     align-items: start;
